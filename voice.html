@@ -1,0 +1,50 @@
+<head>
+  <title>voice</title>
+  <script src="helper.js" type="text/javascript"></script> 
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  <p></p>
+  {{> hello}}
+</body>
+
+<template name="hello">
+    <button>Click Me</button>
+    <p>You've pressed the button {{counter}} times.</p>
+    <audio controls autoplay></audio>
+    {{> beginRecord }}
+    <p></p>
+    {{> endRecord}}
+    
+</template>
+
+
+<!-- begin begin record template -->
+<template name="beginRecord">
+    <div id="message">aa</div>
+    <input type="button" id="record" value="Record">
+</template>
+
+
+<!-- begig end record template -->
+<template name="endRecord">
+    <input type="button" id="export" value="Export">
+</template>
+
+
+<!-- user interface -->
+<!-- <template name="home">
+    <div id="video-list">
+        {{#each userList}}
+            {{> userVideo}}
+        {{/each}}
+    </div>
+</template>
+ 
+<template name="userVideo">
+    <div id="{{_id}}" class="video-item">
+        {{email}}: <a href="{{pathFor 'showVideo'}}">Video</a>
+    </div>
+</template> -->
+
